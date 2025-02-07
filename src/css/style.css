@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+.lexend-text {
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+:root{
+    --black: #000000;
+    --darkgrey: #333333;
+    --grey:#9c9c9c;
+
+}
+
+body {
+    font-family: 'Lexend';
+    background: var(--darkgrey);
+    margin: 0;
+}
+main{
+    padding-top: 95px;
+    padding-bottom: 300px;
+}
+section{
+    min-height: 500px;
+}
+p{
+    font-size: 1.3em;
+    line-height: 1.4em;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+}
+h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: white;
+}
+h2{
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 0;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+ /* Navbar container */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Navbar brand/logo */
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Navbar links */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0 10px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar-links i {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: left;
+        margin: 10px 0;
+    }
+}
+  #navMobile {
+    display: none;
+  }
+  .wrapper-nav-mobil {
+    display: none;
+    position: fixed;
+    top: 0 ;
+    right: 0 ;
+    padding: 20px;
+  }
+  .nav-mobile-dropdown a{
+    padding: 2%;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: left;
+        margin: 10px 0;
+    }
+
+  @media screen and (max-width:1000px) {
+    .navbar-links {
+      display: none;
+    }
+    .wrapper-nav-mobil {
+      display: grid;
+    }
+  }
+  #navMobile{
+    z-index: 99;
+    background: var(--darkgrey);
+    width: 90vw;
+    height: 90vh;
+  }
+}
+/* Carousel container */
+.carousel {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--darkgrey);
+}
+
+/* Carousel inner container */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Individual blog post */
+.blog-post {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-post img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.blog-post h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.blog-post p {
+    font-size: 16px;
+}
+
+/* Navigation buttons */
+.carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -100px;
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
