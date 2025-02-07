@@ -241,8 +241,8 @@ img{
 }
 
 .blog-post img {
-    max-width: 400px;
-    border-radius: 10px;
+    max-width: 800px;
+    max-height: 400px;
 }
 
 .blog-post h2 {
@@ -262,4 +262,50 @@ img{
         max-height: 200px;
     }
  
+}
+
+.blog-post-page {
+    padding: 5%;
+}
+.blog-post-page img{
+    max-height: 500px;
+}
+.blog-post-page p{
+    max-width: 80vw;
+}
+
+
+/* BLOGLIST WITH SORTING*/
+.controls {  
+    margin-bottom: 20px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#postList {
+    list-style: none;
+    padding: 0;
+}
+
+#postList li {
+    background-color: var(--darkgrey);
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#postList h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#postList p {
+    margin: 10px 0 0;
+    font-size: 16px;
 }

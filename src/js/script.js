@@ -7,12 +7,14 @@ function myNav() {
     }
   }
 
+const url ="https://sigridjohanne.site/wp-json/wp/v2/"
 
   async function fetchBlogPosts() {
     try {
-        const response = await fetch('https://sigridjohanne.site/wp-json/wp/v2/posts');
+        const response = await fetch(url+'posts');
         const posts = await response.json();
         displayCarouselPosts(posts);
+        return posts;
     } catch (error) {
         console.error('Error fetching blog posts:', error);
     }
@@ -20,7 +22,7 @@ function myNav() {
 
 async function getImageUrl(mediaId) {
     try {
-        const response = await fetch(`https://sigridjohanne.site/wp-json/wp/v2/media/${mediaId}`);
+        const response = await fetch(url +`media/${mediaId}`);
         const media = await response.json();
         return media.source_url;
     } catch (error) {
@@ -42,6 +44,9 @@ async function displayCarouselPosts(posts) {
             <h2>${post.title.rendered}</h2>
             <p>${post.excerpt.rendered}</p>
         `;
+        blogPostElement.addEventListener('click', () => {
+            window.location.href = `blog.html?id=${post.id}`;
+        });
         carouselInner.appendChild(blogPostElement);
     }
 
@@ -69,5 +74,55 @@ async function displayCarouselPosts(posts) {
         showSlide(currentIndex + 1);
     });
 }
-// Fetch and display latest posts on page load
+
 fetchBlogPosts();
+
+//list all blogposts
+
+function displayPosts(posts) {
+    const postList = document.getElementById('postList');
+    postList.innerHTML = '';
+
+    posts.forEach(post => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <h2>${post.title.rendered}</h2>
+            <p>${post.date}</p>
+            <p>${post.excerpt.rendered}</p>
+        `;
+        postList.appendChild(listItem);
+    });
+}
+
+function sortPosts(posts, criteria) {
+    if (criteria === 'title') {
+        return posts.sort((a, b) => a.title.rendered.localeCompare(b.title.rendered));
+    } else {
+        return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    }
+}
+
+function searchPosts(posts, query) {
+    return posts.filter(post => post.title.rendered.toLowerCase().includes(query.toLowerCase()));
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    let posts = await fetchBlogPosts();
+    displayPosts(posts);
+
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value;
+        const filteredPosts = searchPosts(posts, query);
+        displayPosts(filteredPosts);
+    });
+
+    sortSelect.addEventListener('change', () => {
+        const criteria = sortSelect.value;
+        const sortedPosts = sortPosts(posts, criteria);
+        displayPosts(sortedPosts);
+    });
+});
+
