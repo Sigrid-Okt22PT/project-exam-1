@@ -1,152 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta nameviewport="width=device-width, initial-scale=1.0">
-    <title>Blog Post Carousel</title>
-    <style>
-        /* Base styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    <head>
+        <title>Contact | Outdoor adventures</title>
 
-        /* Carousel container */
-        .carousel {
-            width: 80%;
-            max-width: 800px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
+        <meta name="description" content="My adventures out in the unknown" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        /* Carousel inner container */
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
+        <link rel="stylesheet" href="src/css/style.css">
+        <script src="https://kit.fontawesome.com/195dafed95.js" crossorigin="anonymous"></script>
 
-        /* Individual blog post */
-        .blog-post {
-            min-width: 100%;
-            box-sizing: border-box;
-            padding: 20px;
-            text-align: center;
-        }
+    </head>
 
-        .blog-post img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="navbar-brand">Brand</a>
+                <ul class="navbar-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blogposts.html">Blog</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        </li>
+                </ul>
+                <div class="wrapper-nav-mobil" >
+                    <a href="javascript:void(0);" onclick="myNav()" class=""><i class="fas fa-regular fa-bars fa-lg"></i></a>
+                    <div class="nav-mobile-dropdown"  id="navMobile">
+                      <div class="wrapper-nav-mobil">
+                        <a href="javascript:void(1);" onclick="myNav()" class=""><i class="fas fa-regular fa-x fa-lg"></i></a> </div>
+                        <a href="index.html">Home</a>
+                        <a href="blogposts.html">Blog</a>
+                        <a href="about.html">About us</a>
+                    
+                  </div>
+                
+                 
+            </nav>
+            
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Contact</h1>
+                </div>
+            </section>
 
-        .blog-post h2 {
-            font-size: 24px;
-            margin: 10px 0;
-        }
+          
+            
 
-        .blog-post p {
-            font-size: 16px;
-        }
 
-        /* Navigation buttons */
-        .carousel-buttons {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            top: -50px;
-        }
+        </main>
+        <footer>
 
-        .carousel-buttons button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+        </footer>
 
-        .carousel-buttons button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-    </style>
-</head>
-<body>
-    <div class="carousel">
-        <div class="carousel-inner" id="carouselInner"></div>
-        <div class="carousel-buttons">
-            <button id="prevBtn">&lt;</button>
-            <button id="nextBtn">&gt;</button>
-        </div>
-    </div>
+    <script src="src/js/script.js"> </script>
+    </body>
 
-    <script>
-        const carouselInner = document.getElementById('carouselInner');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        let currentIndex = 0;
-
-        // Function to fetch blog posts from the API
-        async function fetchBlogPosts() {
-            try {
-                const response = await fetch('https://sigridjohanne.site/wp-json/wp/v2/posts');
-                const blogPosts = await response.json();
-                displayBlogPosts(blogPosts);
-            } catch (error) {
-                console.error('Error fetching blog posts:', error);
-            }
-        }
-
-        // Function to display blog posts in the carousel
-        function displayBlogPosts(blogPosts) {
-            carouselInner.innerHTML = '';
-            blogPosts.forEach(post => {
-                const blogPostElement = document.createElement('div');
-                blogPostElement.classList.add('blog-post');
-                blogPostElement.innerHTML = `
-                    <img src="${post.wp:featuredmedia.href}" alt="${post.title.rendered}">
-                    <h2>${post.title.rendered}</h2>
-                    <p>${post.content.rendered}</p>
-                `;
-                carouselInner.appendChild(blogPostElement);
-            });
-        }
-
-        function showSlide(index) {
-            const totalSlides = document.querySelectorAll('.blog-post').length;
-            if (index >= totalSlides) {
-                currentIndex = 0;
-            } else if (index < 0) {
-                currentIndex = totalSlides - 1;
-            } else {
-                currentIndex = index;
-            }
-            const offset = -currentIndex * 100;
-            carouselInner.style.transform = `translateX(${offset}%)`;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            showSlide(currentIndex - 1);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            showSlide(currentIndex + 1);
-        });
-
-        // Auto slide
-        setInterval(() => {
-            showSlide(currentIndex + 1);
-        }, 3000);
-
-        // Fetch and display blog posts on page load
-        fetchBlogPosts();
-    </script>
-</body>
 </html>
-
