@@ -14,7 +14,7 @@ const url ="https://sigridjohanne.site/wp-json/wp/v2/"
         const response = await fetch(url+'posts');
         const posts = await response.json();
         displayCarouselPosts(posts);
-        return posts;
+        displayListPosts(posts);
     } catch (error) {
         console.error('Error fetching blog posts:', error);
     }
@@ -79,16 +79,18 @@ fetchBlogPosts();
 
 //list all blogposts
 
-function displayPosts(posts) {
+function displayListPosts(posts) {
     const postList = document.getElementById('postList');
     postList.innerHTML = '';
 
     posts.forEach(post => {
         const listItem = document.createElement('li');
         listItem.innerHTML = `
+        <a href="blog.html?id=${post.id}">
             <h2>${post.title.rendered}</h2>
             <p>${post.date}</p>
             <p>${post.excerpt.rendered}</p>
+            </a>
         `;
         postList.appendChild(listItem);
     });
