@@ -46,6 +46,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     if (isValid) {
         alert('Form submitted successfully!');
-        // You can add form submission logic here
     }
 });

@@ -22,6 +22,12 @@ body {
     font-family: 'Lexend';
     background: var(--backdrop);
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;   
+}
+main{
+    min-height: 100vh;
 }
 
 section{
@@ -72,6 +78,14 @@ select{
     background-color: var(--lightgreen);
     border: none;
     color: var(--daark-blue);
+}
+.box-center{
+    max-width: 800px;
+    margin: 50px auto;
+}
+.box-center img{
+    width: 100%;
+    max-height: 500px;
 }
 
 
@@ -178,6 +192,17 @@ select{
     height: 100vh;
     min-height: 500px;
   }
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--black);
+    color: var(--lightgreen);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* HERO IMAGE */
@@ -300,19 +325,21 @@ select{
 
 /*BLOG SITE*/
 .blog-post-page {
-    margin: 5%;
-    
+    margin: 5%;   
 }
-.blog-post-page img{
+.blog-post-page img, figure{
     max-height: 500px;
+    max-width: 800px;
     object-fit: cover;
     overflow: hidden;
-
+    margin: auto;
 }
 .blog-post-page p{
     max-width: 80%;
-    margin: auto;
-    
+    margin: auto;   
+}
+.blog-post-page h1,h2,h3,h4,h5{
+    text-align: center;  
 }
 
 /* MODAL */
@@ -416,14 +443,15 @@ input[type="text"], select {
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
     box-sizing: border-box;
+    margin-bottom: 5px;
 }
 
 .contact-form .error-message {
-    color: red;
+    color: rgb(245, 74, 74);
     font-size: 0.8em;
+    font-weight: 100;
+    margin-bottom: 20px;
 }
 
 .contact-form button {
