@@ -258,7 +258,6 @@ select{
 
 }
 
-/* Arrows */
 .arrow {
     position: absolute;
     top: 50%;
@@ -315,7 +314,7 @@ select{
     
 }
 
-/* Modal styles */
+/* MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -332,6 +331,7 @@ select{
     display: block;
     max-width: 80%;
     max-height: 80%;
+    margin: 2% auto;
     
 }
 
