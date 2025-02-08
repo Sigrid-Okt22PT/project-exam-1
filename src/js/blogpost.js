@@ -33,6 +33,26 @@ function displayBlogPost(post, imageUrl) {
         <div>${post.content.rendered}</div>
         
     `;
+    // Add event listener for modal functionality
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelector('.blog-post-page img').addEventListener('click', () => {
+        modal.style.display = "block";
+        modalImage.src = imageUrl;
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
 }
 
 // Fetch and display the blog post by its ID from the query string
