@@ -311,6 +311,7 @@ select{
 }
 .blog-post-page p{
     max-width: 80%;
+    margin: auto;
     
 }
 
