@@ -42,7 +42,7 @@ function displayBlogPost(post, imageUrl) {
     const closeModal = document.getElementById("closeModal");
 
     document.querySelector('.blog-post-page img').addEventListener('click', () => {
-        modal.style.display = "block";
+        modal.style.display = "flex";
         modalImage.src = imageUrl;
     });
 
