@@ -348,6 +348,9 @@ footer p {
 
 /* CAROUSEL MOBILE LAYOUT */
 @media (max-width: 1300px) {
+    .blog-post h2{
+        font-size: 1.2em;
+    }
     .blog-post img {
         height: 250px;
     }
@@ -362,7 +365,7 @@ footer p {
     }
 
     .blog-post {
-        min-width: 100vw;
+        width: 100vw;
     }
 
     .blog-post img {
