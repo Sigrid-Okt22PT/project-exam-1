@@ -7,20 +7,26 @@ function myNav() {
     }
 }
 
-
 // Fetch posts from WordPress API
 const url = "https://sigridjohanne.site/wp-json/wp/v2/";
 let posts = [];
 let currentIndex = 0;
 const postsPerPage = 10;
+let page = 1; 
+let totalPages = 1; 
 
 async function fetchBlogPosts() {
     try {
-        const response = await fetch(url + 'posts');
-        posts = await response.json();
-        displayCarouselPosts(posts);
-        displayListPosts();
-        return posts;
+        while (page <= totalPages) {
+            const response = await fetch(`${url}posts?page=${page}`);
+            const newPosts = await response.json();
+            posts = posts.concat(newPosts);
+            const totalPagesHeader = response.headers.get('X-WP-TotalPages');
+            totalPages = totalPagesHeader ? parseInt(totalPagesHeader) : 1;
+            page++;
+        }
+        displayCarouselPosts(posts.slice(0,6));
+        displayListPosts(); 
     } catch (error) {
         console.error('Error fetching blog posts:', error);
     }
@@ -29,7 +35,7 @@ async function fetchBlogPosts() {
 // Fetch image from WordPress API
 async function getImageUrl(mediaId) {
     try {
-        const response = await fetch(url + `media/${mediaId}`);
+        const response = await fetch(`${url}media/${mediaId}`);
         const media = await response.json();
         return media.source_url;
     } catch (error) {
@@ -41,6 +47,8 @@ async function getImageUrl(mediaId) {
 // Carousel
 async function displayCarouselPosts(posts) {
     const carouselInner = document.getElementById('carouselInner');
+    if (!carouselInner) return;
+    
     carouselInner.innerHTML = '';
 
     for (let i = 0; i < posts.length; i += 3) {
@@ -100,6 +108,8 @@ async function displayCarouselPosts(posts) {
 // List of posts with "Load More" functionality
 function displayListPosts(filteredPosts = posts) {
     const postList = document.getElementById('postList');
+    if (!postList) return;
+    
     const endIndex = currentIndex + postsPerPage;
     const postToShow = filteredPosts.slice(currentIndex, endIndex);
 
@@ -109,6 +119,7 @@ function displayListPosts(filteredPosts = posts) {
         listItem.innerHTML = `
             <a href="blog.html?id=${post.id}">
                 <h2>${post.title.rendered}</h2>
+                <span>${post.date}</span>
                 <p>${post.excerpt.rendered}</p>
             </a>
         `;
@@ -117,10 +128,13 @@ function displayListPosts(filteredPosts = posts) {
 
     currentIndex += postsPerPage;
 
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    if (!loadMoreBtn) return;
+
     if (currentIndex >= filteredPosts.length) {
-        document.getElementById('loadMoreBtn').style.display = 'none';
+        loadMoreBtn.style.display = 'none';
     } else {
-        document.getElementById('loadMoreBtn').style.display = 'block';
+        loadMoreBtn.style.display = 'block';
     }
 }
 
@@ -145,16 +159,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     searchInput.addEventListener('input', () => {
         const query = searchInput.value;
         const filteredPosts = searchPosts(posts, query);
-        currentIndex = 0;  // Reset the current index for pagination
-        document.getElementById('postList').innerHTML = '';  // Clear the current posts
+        currentIndex = 0;  
+        document.getElementById('postList').innerHTML = '';  
         displayListPosts(filteredPosts);
     });
 
     sortSelect.addEventListener('change', () => {
         const criteria = sortSelect.value;
         const sortedPosts = sortPosts(posts, criteria);
-        currentIndex = 0;  // Reset the current index for pagination
-        document.getElementById('postList').innerHTML = '';  // Clear the current posts
+        currentIndex = 0;  
+        document.getElementById('postList').innerHTML = '';  
         displayListPosts(sortedPosts);
     });
 
