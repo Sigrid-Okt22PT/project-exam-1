@@ -33,7 +33,10 @@ function displayBlogPost(post, imageUrl) {
         <div>${post.content.rendered}</div>
         
     `;
-    // Add event listener for modal functionality
+    //Add title to browser tab
+    document.title = `${post.title.rendered} | Outdoor Adventure`;
+
+    // Modal for larger picture 
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage");
     const closeModal = document.getElementById("closeModal");
