@@ -307,7 +307,7 @@ footer p {
 .blog-post {
     flex: 1;
     padding: 20px;
-    min-width: 500px;
+    width: 500px;
     text-align: center;
     background-color: var(--backdrop);
     box-sizing: border-box;
@@ -319,7 +319,7 @@ footer p {
     height: 400px;
     width: 100%;
     overflow: hidden;
-
+    object-fit: cover;
 }
 
 .arrow {
@@ -347,10 +347,14 @@ footer p {
 }
 
 /* CAROUSEL MOBILE LAYOUT */
+@media (max-width: 1300px) {
+    .blog-post img {
+        height: 250px;
+    }
+}
 @media (max-width: 768px) {
     .carousel-container {
         width: 100%;
-
     }
 
     .slide {
