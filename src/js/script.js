@@ -25,19 +25,23 @@ async function fetchBlogPosts() {
             totalPages = totalPagesHeader ? parseInt(totalPagesHeader) : 1;
             page++;
         }
-        displayCarouselPosts(posts.slice(0,6));
+        displayCarouselPosts(posts.slice(0,9)); //Only display the 9 most recent blogs 
         displayListPosts(); 
     } catch (error) {
         console.error('Error fetching blog posts:', error);
     }
 }
 
-// Fetch image from WordPress API
+// Fetch image URL from WordPress API
 async function getImageUrl(mediaId) {
     try {
         const response = await fetch(`${url}media/${mediaId}`);
         const media = await response.json();
-        return media.source_url;
+        return {
+            link: media.link,
+            slug: media.slug,
+            title: media.title.rendered,
+        };
     } catch (error) {
         console.error('Error fetching media:', error);
         return '';
@@ -57,11 +61,11 @@ async function displayCarouselPosts(posts) {
 
         for (let j = i; j < i + 3 && j < posts.length; j++) {
             const post = posts[j];
-            const imageUrl = await getImageUrl(post.featured_media);
+            const imageInfo = await getImageUrl(post.featured_media);
             const blogPostElement = document.createElement('div');
             blogPostElement.classList.add('blog-post');
             blogPostElement.innerHTML = `
-                <img src="${imageUrl}" alt="${post.title.rendered}">
+                <img src="${imageInfo.link}" alt="${imageInfo.title}">
                 <h2>${post.title.rendered}</h2>
                 <p>${post.excerpt.rendered}</p>
             `;
