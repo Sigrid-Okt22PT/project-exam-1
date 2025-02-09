@@ -105,13 +105,14 @@ async function displayCarouselPosts(posts) {
     });
 }
 
-// List of posts with "Load More" functionality
+// List of posts 
 function displayListPosts(filteredPosts = posts) {
     const postList = document.getElementById('postList');
     if (!postList) return;
     
     const endIndex = currentIndex + postsPerPage;
     const postToShow = filteredPosts.slice(currentIndex, endIndex);
+
 
     postToShow.forEach(post => {
         const listItem = document.createElement('li');
@@ -126,17 +127,20 @@ function displayListPosts(filteredPosts = posts) {
         postList.appendChild(listItem);
     });
 
+    // Update currentIndex
     currentIndex += postsPerPage;
 
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     if (!loadMoreBtn) return;
 
+    // Hide when no more posts
     if (currentIndex >= filteredPosts.length) {
         loadMoreBtn.style.display = 'none';
     } else {
         loadMoreBtn.style.display = 'block';
     }
 }
+
 
 function sortPosts(posts, criteria) {
     if (criteria === 'title') {
@@ -173,9 +177,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     document.getElementById('loadMoreBtn').addEventListener('click', () => {
-        displayListPosts();
+        displayListPosts(posts);  
     });
+    
 
-    // Initially display the first set of posts
-    displayListPosts();
 });
