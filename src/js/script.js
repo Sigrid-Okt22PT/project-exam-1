@@ -87,12 +87,12 @@ async function displayCarouselPosts(posts) {
     document.getElementById('nextBtn').addEventListener('click', () => {
         showSlide(currentIndex + 1);
     });
-    
+
     document.getElementById('phoneBtn').addEventListener('click', () => {
         showSlide(currentIndex + 1);
         window.scrollTo({
-            top:0,
-            behavior:'smooth' 
+            top: 0,
+            behavior: 'smooth'
         });
     });
 }

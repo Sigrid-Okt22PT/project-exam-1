@@ -6,16 +6,15 @@
     font-weight: 200;
     font-style: normal;
 }
-:root{
+
+:root {
     --black: #000000;
     --backdrop: #0B201F;
-    --daark-blue:#0E2429;
-    --green:#1C7243;
+    --daark-blue: #0E2429;
+    --green: #1C7243;
     --darkgreen: #05512D;
-    --lightgreen:#b9ccbd;
-    --white:#ffffff;
-
-
+    --lightgreen: #b9ccbd;
+    --white: #ffffff;
 }
 
 body {
@@ -24,25 +23,28 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
-main{
+
+main {
     min-height: 100vh;
 }
 
-section{
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-p{
+
+p {
     font-size: 1.1em;
     line-height: 1.4em;
     letter-spacing: 0.04em;
     color: var(--lightgreen);
     font-weight: 200;
 }
+
 h1 {
     font-weight: 600;
     font-size: 2rem;
@@ -50,53 +52,66 @@ h1 {
     text-transform: uppercase;
     color: var(--white);
 }
-h2{
+
+h2 {
     font-weight: 400;
     font-size: 2rem;
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 0;
 }
+
 a {
     text-decoration: none;
     cursor: pointer;
 }
-img{
+
+img {
     max-width: 100%;
 }
-input, textarea{
+
+input,
+textarea {
     border-radius: 5px;
     border: none;
     background-color: var(--lightgreen);
 }
-input::placeholder{
+
+input::placeholder {
     color: var(--white);
 }
-label{
+
+label {
     color: var(--lightgreen);
 }
-select{
+
+select {
     background-color: var(--lightgreen);
     border: none;
     color: var(--daark-blue);
 }
-.box-center{
+
+.box-center {
     max-width: 800px;
     margin: 50px auto;
 }
-.box-center img{
+
+.box-center img {
     width: 100%;
     max-height: 500px;
 }
-@media (max-width: 768px){
-    .no-phone{
+
+@media (max-width: 768px) {
+    .no-phone {
         display: none;
     }
-    .box-center{
+
+    .box-center {
         max-width: 100%;
         margin: 20px;
     }
-    .box-center img{
+
+    .box-center img {
         width: 100%;
         max-height: 300px;
     }
@@ -234,14 +249,14 @@ footer p {
 /* HERO IMAGE */
 .hero {
     position: relative;
-    background-image: url('../../assets/images/AdobeStock_212545631.jpeg'); 
+    background-image: url('../../assets/images/AdobeStock_212545631.jpeg');
     background-position: center;
     width: 100%;
     height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:var(--white);
+    color: var(--white);
     text-align: center;
     overflow: hidden;
 }
@@ -262,9 +277,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .hero{
+    .hero {
         height: 200px;
     }
+
     .hero h1 {
         font-size: 2rem;
     }
@@ -303,31 +319,36 @@ footer p {
     background-color: var(--backdrop);
     box-sizing: border-box;
     cursor: pointer;
-    
+
 }
-.blog-post img{
+
+.blog-post img {
     height: 400px;
     width: 100%;
     overflow: hidden;
 
 }
+
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--backdrop);
-    color:var(--white);
+    color: var(--white);
     border: none;
     padding: 20px;
     cursor: pointer;
     font-size: 25px;
 }
+
 .left {
     left: 0;
 }
+
 .right {
     right: 0;
 }
+
 .arrow_phone {
     display: none;
 }
@@ -336,8 +357,9 @@ footer p {
 @media (max-width: 768px) {
     .carousel-container {
         width: 100%;
-       
+
     }
+
     .slide {
         display: block;
     }
@@ -345,20 +367,23 @@ footer p {
     .blog-post {
         min-width: 100vw;
     }
-    .blog-post img{
+
+    .blog-post img {
         max-width: 100%;
         height: 200px;
     }
+
     .arrow {
         display: none;
     }
+
     .arrow_phone {
         display: block;
         position: absolute;
         bottom: 0;
         right: 0;
         background-color: var(--backdrop);
-        color:var(--white);
+        color: var(--white);
         border: none;
         padding: 20px;
         cursor: pointer;
@@ -369,32 +394,44 @@ footer p {
 
 /*BLOG SITE*/
 .blog-post-page {
-    margin: 5%;   
+    margin: 5%;
 }
-.blog-post-page img, figure{
+
+.blog-post-page img,
+figure {
     max-height: 500px;
     max-width: 800px;
     object-fit: cover;
     overflow: hidden;
     margin: auto;
 }
-.blog-post-page p{
+
+.blog-post-page p {
     max-width: 80%;
-    margin: auto;   
+    margin: auto;
 }
-.blog-post-page h1,h2,h3,h4,h5{
-    text-align: center;  
+
+.blog-post-page h1,
+h2,
+h3,
+h4,
+h5 {
+    text-align: center;
 }
-@media (max-width: 768px){
-    .blog-post-page img, figure{
+
+@media (max-width: 768px) {
+
+    .blog-post-page img,
+    figure {
         max-width: 100%;
         max-height: 300px;
     }
-    .blog-post-page p{
+
+    .blog-post-page p {
         max-width: 100%;
-        margin: 20px; 
-        font-size: 1em; 
-        font-weight: 200; 
+        margin: 20px;
+        font-size: 1em;
+        font-weight: 200;
     }
 }
 
@@ -408,19 +445,20 @@ footer p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
     display: block;
     max-width: 80%;
     max-height: 80%;
-    margin: 2% auto;   
+    margin: 2% auto;
 }
-@media(max-width:768px){
+
+@media(max-width:768px) {
     .modal-content {
         max-width: 100%;
-        margin: 50% auto;   
+        margin: 50% auto;
     }
 }
 
@@ -428,7 +466,7 @@ footer p {
     position: absolute;
     top: 20px;
     right: 30px;
-    color:var(--white);
+    color: var(--white);
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -436,11 +474,12 @@ footer p {
 
 
 /* BLOGLIST WITH SORTING*/
-.controls {  
+.controls {
     margin: 20px;
 }
 
-input[type="text"], select {
+input[type="text"],
+select {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -496,7 +535,7 @@ input[type="text"], select {
     margin-bottom: 20px;
 }
 
-.contact-form label {   
+.contact-form label {
     margin-top: 15px;
 }
 
@@ -521,7 +560,7 @@ input[type="text"], select {
     padding: 20px;
     background-color: var(--darkgreen);
     border-radius: 5px;
-    color:var(--white);
+    color: var(--white);
     border: none;
     cursor: pointer;
 }
@@ -530,7 +569,7 @@ input[type="text"], select {
     background-color: var(--green);
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .contact-form {
         width: 100%;
         max-width: 100%;

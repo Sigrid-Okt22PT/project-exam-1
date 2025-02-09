@@ -1,8 +1,8 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
-    
+
     let isValid = true;
-    
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
@@ -12,7 +12,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const emailError = document.getElementById('emailError');
     const subjectError = document.getElementById('subjectError');
     const messageError = document.getElementById('messageError');
-    
+
     // Clear previous error messages
     nameError.textContent = '';
     emailError.textContent = '';
