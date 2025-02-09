@@ -24,31 +24,26 @@
     </head>
 
     <body>
-        <header>
+        <header>        
             <nav class="navbar">
-                <a href="index.html" class="navbar-brand"><img src="assets/logo/logo.png" alt="">Outdoor adventures</a>
+                <a href="index.html" class="navbar-brand"><img src="assets/logo/logo.png" alt=""><span class="no-phone">Outdoor adventures</span></a>
                 <ul class="navbar-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="blogposts.html">Blog</a></li>
                     <li><a href="about.html">About us</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li>
-                        </li>
                 </ul>
-                <div class="wrapper-nav-mobil" >
-                    <a href="javascript:void(0);" onclick="myNav()" class=""><i class="fas fa-regular fa-bars fa-lg"></i></a>
-                    <div class="nav-mobile-dropdown"  id="navMobile">
-                      <div class="wrapper-nav-mobil">
-                        <a href="javascript:void(1);" onclick="myNav()" class=""><i class="fas fa-regular fa-x fa-lg"></i></a> </div>
-                        <a href="index.html">Home</a>
-                        <a href="blogposts.html">Blog</a>
-                        <a href="about.html">About us</a>
-                    
-                  </div>
-                
-                 
+                <div class="wrapper-nav-mobil">
+                    <a href="javascript:void(0);" onclick="myNav()" class="mobile-menu-icon"><i class="fas fa-bars fa-lg"></i></a>
+                </div>
             </nav>
-            
+            <div class="nav-mobile-dropdown" id="navMobile">
+                <a href="javascript:void(0);" onclick="myNav()" class="close-menu-icon"><i class="fas fa-times fa-lg"></i></a>
+                <a href="index.html">Home</a>
+                <a href="blogposts.html">Blog</a>
+                <a href="about.html">About us</a>
+                <a href="contact.html">Contact</a>
+            </div>  
         </header>
         <main>
             <section id="blogPostContent" class="blog-post-page">

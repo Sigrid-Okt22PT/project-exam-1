@@ -1,11 +1,12 @@
 function myNav() {
     var x = document.getElementById("navMobile");
-    if (x.style.display === "block") {
+    if (x.style.display === "flex") {
         x.style.display = "none";
     } else {
-        x.style.display = "block";
+        x.style.display = "flex";
     }
 }
+
 
 // Fetch posts from WordPress API
 const url = "https://sigridjohanne.site/wp-json/wp/v2/";
@@ -85,6 +86,14 @@ async function displayCarouselPosts(posts) {
 
     document.getElementById('nextBtn').addEventListener('click', () => {
         showSlide(currentIndex + 1);
+    });
+    
+    document.getElementById('phoneBtn').addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+        window.scrollTo({
+            top:0,
+            behavior:'smooth' 
+        });
     });
 }
 
