@@ -413,13 +413,15 @@ footer p {
 
 /*BLOG SITE*/
 .blog-post-page {
-    margin: 5%;
+    margin: auto;
+    max-width: 800px;
+    padding: 3%;
 }
 
 .blog-post-page img,
 figure {
     max-height: 500px;
-    max-width: 700px;
+    max-width: 100%;
     object-fit: cover;
     overflow: hidden;
     margin: auto;
@@ -451,8 +453,6 @@ h5 {
     }
 
     .blog-post-page p {
-        max-width: 100%;
-        margin: 20px;
         font-size: 1em;
         font-weight: 200;
     }
