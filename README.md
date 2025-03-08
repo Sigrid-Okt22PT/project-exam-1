@@ -47,21 +47,64 @@ You will need to add at least 12 blogs for your website. You can use lorem ipsum
 
 Note that this is an exam, and therefore tutor support will be limited as per the study plan.
 
-## Level 1 Process
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+
+# HTML CSS JavaScript Interaction
+cross-course-project-Sigrid-Okt22PT created by GitHub Classroom
+
+Netlify: https://sigrid-okt22pt-wct-assignment.netlify.app/
+
+# Cross-course project - Rainy Days
+
+![image](https://sigrid-okt22pt-wct-assignment.netlify.app/assets/images/frontpage_screen.png)
+
+A simple overview of the use/purpose of the project.
+
+## Description
+
+Add a more detailed description of what your project entails and set out to do.
+
+You can add some bullet points if you'd like to:
+
+- List item 1
+- List item 2
+- List item 3
+
+## Built With
+
+You can list a the tech stack that you've used over here
+
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
+
+## Getting Started
+
+### Installing
+
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/Sigrid-Okt22PT/project-exam-1.git
+```
+
+
+### Running
+
+Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
+
+
+
+## Contributing
+
+Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My LinkedIn page](www.linkedin.com)
+
 
