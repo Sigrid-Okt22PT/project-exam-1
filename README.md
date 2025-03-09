@@ -15,6 +15,7 @@ Welcome to the Outdoor Adventures website repository! This project showcases adv
 - [Built With](#built-with)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
+- [Changing the WordPress API Endpoint](#Changing-the-WordPress-API-Endpoint)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -50,6 +51,34 @@ To set up and run this project locally, follow these steps:
 ## Usage
 
 To use this website, simply open the `index.html` file in your web browser. You can customize the content, images, and styles to suit your needs.
+
+## Changing the WordPress API Endpoint
+
+If you want to use a different WordPress API endpoint for fetching blog posts and media, you can update the `url` variable in the JavaScript code. Follow these steps to make the necessary changes:
+
+1. **Locate the JavaScript file**:
+    - Open the JavaScript file where the API functions are defined (e.g., `script.js`).
+
+2. **Update the `url` variable**:
+    - Find the `url` variable at the top of the file. It should look something like this:
+    ```javascript
+    const url = "https://yoursite.com/wp-json/wp/v2/";
+    ```
+
+3. **Replace the existing URL with the new API endpoint**:
+    - Change the URL to the new WordPress API endpoint. For example, if your new WordPress site is hosted at `https://yoursite.com`, update the `url` variable as follows:
+    ```javascript
+    const url = "https://newsite.com/wp-json/wp/v2/";
+    ```
+
+4. **Save the changes**:
+    - Save the JavaScript file after updating the `url` variable.
+
+5. **Test the changes**:
+    - Open your website in a web browser and verify that the blog posts and media are being fetched from the new API endpoint.
+
+By following these steps, you can easily switch to a different WordPress API endpoint for fetching blog posts and media. If you encounter any issues, double-check the API URL and ensure that the new WordPress site has the REST API enabled.
+
 
 ## Contributing
 
