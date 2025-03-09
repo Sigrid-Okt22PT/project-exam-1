@@ -34,12 +34,12 @@ To set up and run this project locally, follow these steps:
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourusername/outdoor-adventures.git
+    git clone https://github.com/Sigrid-Okt22PT/project-exam-1.git
     ```
 
 2. **Navigate to the project directory:**
     ```sh
-    cd outdoor-adventures
+    cd project-exam-1
     ```
 
 3. **Open the project in your favorite code editor:**
