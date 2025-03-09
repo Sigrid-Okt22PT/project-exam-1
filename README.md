@@ -88,7 +88,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 2. **Clone your forked repository:**
     ```sh
-    git clone https://github.com/yourusername/outdoor-adventures.git
+    git clone https://github.com/Sigrid-Okt22PT/project-exam-1.git
     ```
 
 3. **Create a new branch:**
