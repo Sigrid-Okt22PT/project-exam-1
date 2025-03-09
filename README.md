@@ -1,79 +1,32 @@
-# Project exam
+# Outdoor Adventures
 
 ![image](https://sigrid-project-exam.netlify.app/assets/images/mainpage_screencapture.png)
 
-A blog using wordpress api for all posts.
+View the website at https://sigrid-project-exam.netlify.app/
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
-
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
-
-## Built With
-
-- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) Markup language for structuring the content.
-- **CSS:** Stylesheet language for designing the website.
-- **JavaScript:** Programming language for adding interactivity.
-- **Font Awesome:** Icon library for adding icons.
-
-
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![CSS](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-
-
-
-### Installing
-
-
-1. Clone the repo:
-
-```bash
-git clone https://github.com/Sigrid-Okt22PT/project-exam-1.git
-```
-
-
-## Contact
-
-[My LinkedIn page](https://www.linkedin.com/in/sigrid-johanne-husev%C3%A5g-132513a5/)
-
-# Outdoor Adventures
-
-Welcome to the Outdoor Adventures website repository! This project showcases my adventures out in the unknown. The website is built using HTML, CSS, and JavaScript, and it's designed to be responsive and visually appealing.
+Welcome to the Outdoor Adventures website repository! This project showcases adventures out in the unknown. The website is built using HTML, CSS, and JavaScript, and fetches the blogpost from a wordpress api.
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
+- [Description](#description)
+- [Table of Contents](#table-of-contents)
+- [Built With](#built-with)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
-## Project Overview
 
-Outdoor Adventures is a portfolio website that displays various outdoor activities and adventures. It includes a hero section, a responsive cards section, and a mobile-friendly navigation menu.
+## Built With
 
-## Features
-
-- **Responsive Design:** The website is fully responsive and works on all screen sizes.
-- **Hero Section:** A visually appealing hero section with an image and overlay.
-- **Cards Section:** A section with cards displaying images, titles, descriptions, and links.
-- **Mobile Navigation:** A mobile-friendly navigation menu that toggles on smaller screens.
-
-## Technologies Used
-
-- **HTML:** Markup language for structuring the content.
-- **CSS:** Stylesheet language for designing the website.
-- **JavaScript:** Programming language for adding interactivity.
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) Markup language for structuring the content.
+- ![CSS](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) Stylesheet language for designing the website.
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) Programming language for adding interactivity.
 - **Font Awesome:** Icon library for adding icons.
+
 
 ## Setup and Installation
 
@@ -134,10 +87,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions or feedback, please feel free to reach out to me at yourname@example.com.
-
----
-
-Enjoy exploring the great outdoors! 🌲🌄
-
+[My LinkedIn page](https://www.linkedin.com/in/sigrid-johanne-husev%C3%A5g-132513a5/)
 
