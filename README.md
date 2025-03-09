@@ -25,6 +25,7 @@ Welcome to the Outdoor Adventures website repository! This project showcases adv
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) Markup language for structuring the content.
 - ![CSS](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) Stylesheet language for designing the website.
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) Programming language for adding interactivity.
+- ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) Wordpress as API.
 - **Font Awesome:** Icon library for adding icons.
 
 
