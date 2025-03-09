@@ -1,5 +1,4 @@
 # Outdoor Adventures
-
 ![image](https://sigrid-project-exam.netlify.app/assets/images/mainpage_screencapture.png)
 
 View the website at https://sigrid-project-exam.netlify.app/
@@ -68,7 +67,7 @@ If you want to use a different WordPress API endpoint for fetching blog posts an
 3. **Replace the existing URL with the new API endpoint**:
     - Change the URL to the new WordPress API endpoint. For example, if your new WordPress site is hosted at `https://yoursite.com`, update the `url` variable as follows:
     ```javascript
-    const url = "https://newsite.com/wp-json/wp/v2/";
+    const url = "https://yoursite.com/wp-json/wp/v2/";
     ```
 
 4. **Save the changes**:
