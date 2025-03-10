@@ -1,6 +1,7 @@
 # Outdoor Adventures
 ![image](https://sigrid-project-exam.netlify.app/assets/images/mainpage_screencapture.png)
 
+## Demo
 View the website at https://sigrid-project-exam.netlify.app/
 
 ## Description
